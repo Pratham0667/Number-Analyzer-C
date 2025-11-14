@@ -18,7 +18,7 @@ void countOddEven( int limit, int slimit);
 void countOdd(int limit, int slimit);
 void countEven(int limit, int slimit);
 void sumOfN(int limit, int slimit);
-int factorial();
+long factorial();
 // adding avg and mean , percentage calculator , area of rec aggle 
 // this is my mini project containing counting odd or even and both 
 int main(){
@@ -168,7 +168,7 @@ printf("\nThe Sum of Numbers from %d to %d: %d\n", slimit, limit, sum);
 printf("[Analyzed on: %s]\n", ctime(&t));
 printf("\n--------------------------------------\n");
 }
- int factorial() {
+ long factorial() {
     long long int num, fact = 1;
     int i;
     time_t t;
@@ -190,5 +190,5 @@ printf("\n--------------------------------------\n");
     printf("[Analyzed on: %s]\n", ctime(&t));
     printf("--------------------------------------\n");
 
-    return 0;
+
 }
