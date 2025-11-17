@@ -19,6 +19,7 @@ void countOdd(int limit, int slimit);
 void countEven(int limit, int slimit);
 void sumOfN(int limit, int slimit);
 long factorial();
+void square();
 // adding avg and mean , percentage calculator , area of rec aggle 
 // this is my mini project containing counting odd or even and both 
 int main(){
@@ -41,10 +42,11 @@ int main(){
   printf("3. Display Both Counts\n");
   printf("4. Sum Of N numbers\n");
   printf("5. Factorial\n");
-  printf("6. Exit\n");
+  printf("6. Square\n");
+  printf("7. Exit\n");
  printf("Enter Your Choice : ");
  scanf("%d", &choice);
- if (choice == 6) {
+ if (choice == 7) {
     printf("\nThank you for using Odd & Even Analyzer. Goodbye!\n");
     system("cls");
     return 0;
@@ -54,7 +56,13 @@ int main(){
         printf("\nPress Enter to continue...");
         getchar(); getchar();
         continue;
+    }else if (choice == 6)
+    {
+      square();
+      printf("\nPress Enter to continue...");
+        getchar(); getchar();
     }
+    
 
 
  printf("==========================\n");
@@ -190,5 +198,18 @@ printf("\n--------------------------------------\n");
     printf("[Analyzed on: %s]\n", ctime(&t));
     printf("--------------------------------------\n");
 
+}
+void square() {
+    int num = 0, sq;
 
+    printf("********* SQUARE OF NUMBERS **********\n");
+    printf("Enter the Number: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("Negative Number! (Warning!)\n");
+    }
+
+    sq = num * num;
+    printf("The Square of the Number: %d\n", sq);
 }
