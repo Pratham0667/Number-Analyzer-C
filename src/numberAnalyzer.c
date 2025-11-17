@@ -201,6 +201,8 @@ printf("\n--------------------------------------\n");
 }
 void square() {
     int num = 0, sq;
+    time_t t;
+    time(&t);
 
     printf("********* SQUARE OF NUMBERS **********\n");
     printf("Enter the Number: ");
@@ -212,4 +214,6 @@ void square() {
 
     sq = num * num;
     printf("The Square of the Number: %d\n", sq);
+    printf("[Analyzed on: %s]\n", ctime(&t));
+    printf("--------------------------------------\n");
 }
